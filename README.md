@@ -16,7 +16,7 @@ Build the Docker Container:
 cd ros_ci_docker
 docker build -t ci/ros:scenario_sim .
 ```
-> **Note:** Ensure you can run docker without sudo. Building the conainer takes between 15 minutes and 1 hour depending on your systems performance. 
+> **Note:** Ensure you can run docker without sudo. Building the conainer takes between 30 minutes and 1 hour depending on your systems performance. 
 
 Run the Container:
 ```bash
