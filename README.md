@@ -21,8 +21,8 @@ docker build -t ci/ros:scenario_sim .
 Run the Container:
 ```bash
 mkdir reports
-docker run -v ~/ros_ci_docker/reports:/root/ros_scenario_simulation/reports -it ci/ros:scenario_sim
+docker run -v ~/ros_ci_docker/reports:/root/ros_scenario_simulation/reports -p 8080:90 -it ci/ros:scenario_sim
 ```
 
 ## Viewing the report
-To be able to view the results the report webpage files have to be copied to the created reports folder. They can be found in the [ros_scenario_simulation](https://github.com/arminstr/ros_scenario_simulation) repository.
+Go to [localhost:8080](localhost:8080) and take a look. Open the files from ~/ros_ci_docker/reports.
