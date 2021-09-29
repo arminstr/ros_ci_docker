@@ -1,10 +1,10 @@
 # Docker resources for execution of OpenPlanner together with ROS Scenario Simulation framework
 
-## 1. Install docker
+## Install docker
 Follow this instruction for installing docker:
 https://docs.docker.com/engine/install/ubuntu/
 
-## Steps for execution
+## Commands for execution
 ```bash
 cd ~
 git clone git@github.com:arminstr/ros_ci_docker.git
