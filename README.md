@@ -23,3 +23,6 @@ Run the Container:
 mkdir reports
 docker run -v ~/ros_ci_docker/reports:/root/ros_scenario_simulation/reports -it ci/ros:scenario_sim
 ```
+
+## Viewing the report
+To be able to view the results the report webpage files have to be copied to the created reports folder. They can be found in the [ros_scenario_simulation](https://github.com/arminstr/ros_scenario_simulation) repository.
