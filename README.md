@@ -25,4 +25,4 @@ docker run -v ~/ros_ci_docker/reports:/root/ros_scenario_simulation/reports -p 8
 ```
 
 ## Viewing the report
-Go to **localhost:8080** and take a look. Open the files from ~/ros_ci_docker/reports.
+Go to **localhost:8080** and take a look at the scenarios.
