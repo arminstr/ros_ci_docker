@@ -20,7 +20,6 @@ docker build -t ci/ros:scenario_sim .
 
 Run the Container:
 ```bash
-mkdir reports
 docker run -p 8080:90 -it ci/ros:scenario_sim
 ```
 
