@@ -6,15 +6,16 @@ WORKDIR /root
 ENV PLANNER_WS=planner_workspace
 
 RUN apt update
-RUN apt install -y python-catkin-pkg python-rosdep ros-melodic-catkin
-RUN apt install -y python3-pip python3-colcon-common-extensions python3-setuptools python3-vcstool python-pip
+RUN apt-get install -y python-catkin-pkg python-rosdep ros-melodic-catkin
+RUN apt-get install -y  python-pip python3-pip python3-colcon-common-extensions python3-setuptools python3-vcstool
+RUN apt-get install -y python3 python-dev python3-dev build-essential libssl-dev libffi-dev libxml2-dev libxslt1-dev zlib1g-dev python-pip
 RUN pip3 install -U setuptools
 RUN apt-get install -y ros-melodic-catkin python-catkin-tools
 RUN rosdep update
-RUN apt-get install -y python3-pip
-RUN apt-get install -y python-pip
 RUN pip install --upgrade pip
 RUN pip install -U rospkg
+RUN python3 -m pip install --upgrade pip
+RUN python3 -m pip install --upgrade Pillow
 RUN pip3 install commonroad-io
 RUN pip3 install rospkg numpy matplotlib
 RUN apt-get install -y libproj-dev
