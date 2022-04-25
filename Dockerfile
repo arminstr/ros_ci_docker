@@ -23,7 +23,7 @@ RUN apt-get install -y libprotobuf-dev protobuf-compiler
 RUN apt-get install -y ros-melodic-cmake-modules
 RUN apt-get install -y ros-melodic-rosbash
 
-RUN git clone https://github.com/arminstr/ros_scenario_simulation.git
+RUN git clone https://github.com/arminstr/ros_scenario_simulation.git --branch v0.1.0-alpha --single-branch --recursive
 WORKDIR /root/ros_scenario_simulation
 RUN rosdep install -y --from-paths /root/ros_scenario_simulation/src --ignore-src --rosdistro melodic
 
@@ -43,10 +43,7 @@ RUN apt-get update
 RUN sudo rosdep install -y --from-paths src --ignore-src --rosdistro melodic
 RUN source "/opt/ros/$ROS_DISTRO/setup.bash" && colcon build --cmake-args -DCMAKE_BUILD_TYPE=Release
 
-
 WORKDIR /root/ros_scenario_simulation
-RUN git pull
-RUN git pull
 RUN source "/opt/ros/$ROS_DISTRO/setup.bash" && catkin build; exit 0
 RUN source "/opt/ros/$ROS_DISTRO/setup.bash" && catkin build
 
