@@ -9,7 +9,7 @@ https://docs.docker.com/engine/install/ubuntu/
 Get the repository:
 ```bash
 cd ~
-git clone git@github.com:arminstr/ros_ci_docker.git
+git clone https://github.com/arminstr/ros_ci_docker.git
 ```
 Build the Docker Container:
 ```bash
